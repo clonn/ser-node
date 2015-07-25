@@ -7,14 +7,15 @@
     "ser": "./bin/ser"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/clonn/ser-node.git"
   },
   "author": {
-    "name": "clonn", "email": "clonncd@gmail.com"
+    "name": "clonn",
+    "email": "clonncd@gmail.com"
   },
   "license": "MIT",
   "bugs": {
@@ -23,7 +24,8 @@
   "homepage": "https://github.com/clonn/ser-node#readme",
   "dependencies": {
     "coffee-script": "^1.9.3",
-    "request": "^2.60.0"
+    "request": "^2.60.0",
+    "traceur": "0.0.91"
   },
   "devDependencies": {
     "chai": "^3.2.0"
