@@ -1,8 +1,8 @@
 {
   "name": "ser-node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ser-node",
-  "main": "index.js",
+  "main": "lib/index.js",
   "bin": {
     "ser": "./bin/ser"
   },
