@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/clonn/ser-node#readme",
   "dependencies": {
+    "browser-request": "^0.3.3",
     "coffee-script": "^1.9.3",
     "request": "^2.60.0",
     "traceur": "0.0.91"

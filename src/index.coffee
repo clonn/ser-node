@@ -1,5 +1,10 @@
 config = require("./config.json")
-request = require("request")
+try
+  request = require("request")
+catch
+  request = require('browser-request')
+  
+
 url = require("url")
 
 class SerNode
