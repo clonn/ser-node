@@ -25,21 +25,38 @@ var serNode = new SerNode({
 ### then have to get `token`
 
 ```
-serNode.getToken().then(function (data) {
-  // do sth here
-});
+serNode.connect();
 ```
 
 ### start use API running
 
 ```
+  serNode.connect(function () {
+    serNode.request("top_article/ptt", {
+      period: 10
+    })
+    .then(function (result) {
+      
+      // get result data
+    });
+  });
+  
+```
+
+or
+
+```
+serNode.connect().then(function () {
+
   serNode.request("top_article/ptt", {
     period: 10
   })
   .then(function (result) {
     
     // get result data
-  });
+  });  
+  
+})
 ```
 
 ## npm
