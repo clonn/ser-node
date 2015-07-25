@@ -1,5 +1,7 @@
 # Ser-node
 
+[![Build Status](https://travis-ci.org/clonn/ser-node.svg?branch=master)](https://travis-ci.org/clonn/ser-node)
+
 Ser-node is a node SDK of [idear iii api](http://api.ser.ideas.iii.org.tw/docs/), you can referece official document and usage [link](http://api.ser.ideas.iii.org.tw/docs/).
 
 We support full stack function for Node.js developer and JavaScript developer can use, it is a project of [Ideas Tech 2015](http://hack2015.ideas.iii.org.tw/).
