@@ -1,12 +1,13 @@
 {
   "name": "ser-node",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ser-node",
   "main": "index.js",
   "bin": {
     "ser": "./bin/ser"
   },
   "scripts": {
+    "jsbuild": "browserify --entry lib/index.js --outfile build/ser.node.build.js",
     "test": "./node_modules/.bin/mocha test"
   },
   "repository": {
