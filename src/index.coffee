@@ -15,8 +15,9 @@ class SerNode
     that = @
     return url.resolve(that.config.endpoint, urlparam)
 
-  getToken: () ->
+  connect: (cb) ->
     that = @
+    cb = cb or () -> return
     promise = new Promise (resolve, reject) ->
 
       requestUrl = that.getRequestUrl("user/get_token")
@@ -30,16 +31,23 @@ class SerNode
         form: requestForm
       }, 
       (err, res, body) ->
-        
-        return reject(err) if err
+
+        if (err)
+          cb(err)
+          return reject(err)
 
         result = JSON.parse body
         
-        return reject(result) unless result.result.token
+        unless result.result.token
+          cb(result)
+          return reject(result)
+
         that.token = result.result.token
+        cb(result)
         return resolve result
 
     return promise
+    
   user: require("./user")
 
   request: (url, params) ->

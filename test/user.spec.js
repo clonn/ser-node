@@ -10,7 +10,7 @@ var serNode = new SerNode({
 describe("get user token", function (done) {
   it("get init promise", function (done) {
     console.log(serNode)
-    serNode.getToken().then(function (data) {
+    serNode.connect().then(function (data) {
       console.log(data);
       (data.message.indexOf("success") > -1).should.be.true;
       data.result.should.be.an.Object;
