@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "ser-node",
   "main": "index.js",
+  "bin": {
+    "ser": "./bin/ser"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/clonn/ser-node.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "clonn", "email": "clonncd@gmail.com"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/clonn/ser-node/issues"
   },
@@ -19,5 +24,8 @@
   "dependencies": {
     "coffee-script": "^1.9.3",
     "request": "^2.60.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0"
   }
 }

@@ -1,0 +1,3 @@
+-t 500000
+--reporter dot
+--require chai
