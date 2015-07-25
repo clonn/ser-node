@@ -11,14 +11,19 @@ class SerNode
     return @
     # return @getToken()
   
+  getRequestUrl: (urlparam) ->
+    that = @
+    return url.resolve(that.config.endpoint, urlparam)
+
   getToken: () ->
     that = @
     promise = new Promise (resolve, reject) ->
 
-      requestUrl = url.resolve(that.config.endpoint, "user/get_token")
+      requestUrl = that.getRequestUrl("user/get_token")
+      console.log(requestUrl)
       requestForm = 
-          id: that.id
-          secret_key: that.secret_key
+        id: that.id
+        secret_key: that.secret_key
 
       request.post {
         url: requestUrl
@@ -36,6 +41,25 @@ class SerNode
 
     return promise
   user: require("./user")
+
+  request: (url, params) ->
+    that = @
+    promise = new Promise (resolve, reject) ->
+      requestUrl = that.getRequestUrl(url)
+      requestForm = params
+      requestForm.token = that.token
+
+      request.post {
+        url: requestUrl
+        form: requestForm
+      },
+      (err, res, body) ->
+        
+        return reject(err) if err
+
+        result = JSON.parse body
+        return resolve result
+    return promise
 
 
 module.exports = SerNode
