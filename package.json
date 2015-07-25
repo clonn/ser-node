@@ -7,7 +7,7 @@
     "ser": "./bin/ser"
   },
   "scripts": {
-    "jsbuild": "browserify --entry lib/index.js --outfile build/ser.node.build.js",
+    "jsbuild": "browserify --entry client/usage.js --outfile client/ser.node.build.js",
     "test": "./node_modules/.bin/mocha test"
   },
   "repository": {
