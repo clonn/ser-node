@@ -13,10 +13,15 @@ npm install ser-node
 ```
 ## usage
 
+### import / require Ser-Node module
+
+```
+var SerNode = require("ser-node");
+```
+
 ### init ser-node
 
 ```
-var SerNode = require("ser-node")
 var serNode = new SerNode({
   id: "SER_ID",
   secret_key: "SECRET_KEY"
@@ -36,11 +41,11 @@ serNode.connect();
       period: 10
     })
     .then(function (result) {
-      
+
       // get result data
     });
   });
-  
+
 ```
 
 or
@@ -52,10 +57,10 @@ serNode.connect().then(function () {
     period: 10
   })
   .then(function (result) {
-    
+
     // get result data
-  });  
-  
+  });
+
 })
 ```
 
