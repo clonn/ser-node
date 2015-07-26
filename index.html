@@ -38,10 +38,15 @@
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>usage</h2>
 
 <h3>
+<a id="require-ser-node" class="anchor" href="#require-ser-node" aria-hidden="true"><span class="octicon octicon-link"></span></a>import / require module</h3>
+
+<pre><code>var SerNode = require("ser-node");
+</code></pre>
+
+<h3>
 <a id="init-ser-node" class="anchor" href="#init-ser-node" aria-hidden="true"><span class="octicon octicon-link"></span></a>init ser-node</h3>
 
-<pre><code>var SerNode = require("ser-node")
-var serNode = new SerNode({
+<pre><code>var serNode = new SerNode({
   id: "SER_ID",
   secret_key: "SECRET_KEY"
 });
@@ -64,6 +69,7 @@ var serNode = new SerNode({
     .then(function (result) {
 
       // get result data
+      console.log(data);
     });
   });
 
@@ -77,9 +83,9 @@ var serNode = new SerNode({
     period: 10
   })
   .then(function (result) {
-
     // get result data
-  });  
+    console.log(data);
+  });
 
 })
 </code></pre>
@@ -103,7 +109,7 @@ var serNode = new SerNode({
 
 <p>MIT</p>
 <section class="page-header">
-    <h3>or</h3> 
+    <h3>or</h3>
     <a href="http://clonn.github.io/ser-node/js/lib/ser.node.build.js" class="btn">Download ser-node JavaScript SDK</a>
 </section>
       <footer class="site-footer">
@@ -114,7 +120,7 @@ var serNode = new SerNode({
 
     </section>
 
-  
+
   </body>
 </html>
 
